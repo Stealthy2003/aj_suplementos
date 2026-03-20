@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJ Suplementos - Loja</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 class="texto">AJ Suplementos</h1>   
+    <div id="icone-carrinho" style="position: fixed; top: 20px; right: 20px; background: #00bcd4; padding: 10px; border-radius: 50%; cursor: pointer; z-index: 100;" onclick="abrirModalCarrinho()">
+    🛒 <span id="contagem-carrinho">0</span>
+</div>
+    
+    <h2 class="titulo-categoria">Proteínas</h2>
+    <div id="categoria-proteinas" class="galeria"></div>
+
+    <hr class="divisor">
+
+    <h2 class="titulo-categoria">Creatinas</h2>
+    <div id="categoria-creatinas" class="galeria"></div>
+
+    <hr class="divisor">
+
+    <h2 class="titulo-categoria">Acessórios</h2>
+    <div id="categoria-acessorios" class="galeria"></div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <h2>Finalizar Pedido</h2>
+            <p id="produtoNome" style="font-weight: bold; color: #00bcd4;"></p>
+
+            <label>Forma de pagamento:</label>
+            <select id="pagamento">
+                <option value="Espécie">Espécie</option>
+                <option value="Cartão">Cartão</option>
+            </select>
+
+            <label>Endereço:</label>
+            <input type="text" id="endereco" placeholder="Rua, número, bairro">
+            <p id="erro-endereco" style="color: #ff4d4d; font-size: 14px; display: none; margin-top: -5px;">
+                Por favor, informe seu endereço.
+            </p>
+
+            <div style="display: flex; gap: 10px; flex-direction: column;">
+                <button class="btn-animado" onclick="finalizarPedido()">Enviar Pedido</button>
+                <button class="btn-animado" style="background-color: #af0202;" onclick="fecharModal()">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

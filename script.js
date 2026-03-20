@@ -25,7 +25,7 @@ function renderizarProdutos() {
         if (container) {
             const card = `
             <div class="produto">
-                <img src="img/${produto.imagem.trim()}" alt="${produto.nome}">
+                <img src="./${produto.imagem.trim()}" alt="${produto.nome}">
                 <div class="info">
                     <h2>${produto.nome}</h2>
                     <p>${produto.preco}</p>

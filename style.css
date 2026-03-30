@@ -13,13 +13,22 @@ h1 {
 
 .galeria {
     display: flex;
-    justify-content: flex-start; 
-    flex-wrap: wrap;
-    gap: 25px;
+    justify-content: flex-start;
+    flex-wrap: nowrap; 
+    overflow-x: auto; 
+    gap: 20px;
     padding: 20px 5%;
+    scroll-behavior: smooth; 
+    scroll-snap-type: x mandatory; 
+}
+
+.galeria::-webkit-scrollbar {
+    display: none;
 }
 
 .produto {
+    flex: 0 0 auto; 
+    scroll-snap-align: center; 
     background-color: #111;
     border-radius: 10px;
     padding: 15px;
@@ -156,14 +165,10 @@ input, select {
         justify-content: space-between; 
     }
 
+    {
     .produto {
-        width: 48%; 
-        max-width: none; 
-        padding: 10px; 
-        min-height: 320px; 
-        margin: 0; 
+        width: 180px; 
     }
-
     .produto img {
         height: 120px; 
         margin-bottom: 10px;
